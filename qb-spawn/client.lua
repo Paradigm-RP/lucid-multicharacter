@@ -1,14 +1,4 @@
-QBCore = nil
-
-Citizen.CreateThread(function() 
-    while true do
-        Citizen.Wait(10)
-        if QBCore == nil then
-            TriggerEvent("QBCore:GetObject", function(obj) QBCore = obj end)    
-            Citizen.Wait(0)
-        end
-    end
-end)
+local QBCore = exports['qb-core']:GetCoreObject()
 
 --CODE
 local camZPlus1 = 1500

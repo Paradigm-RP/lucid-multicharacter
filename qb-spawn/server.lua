@@ -1,5 +1,4 @@
-QBCore = nil
-TriggerEvent('QBCore:GetObject', function(obj) QBCore = obj end)
+local QBCore = exports['qb-core']:GetCoreObject()
 Citizen.CreateThread(function()
 	local HouseGarages = {}
 	QBCore.Functions.ExecuteSql(false, "SELECT * FROM `houselocations`", function(result)
